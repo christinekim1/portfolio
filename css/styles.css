@@ -34,6 +34,7 @@ nav{
 
 a{
 	text-decoration: none;
+	font-style:none;
 	color: #000;
 }
 
@@ -132,7 +133,7 @@ h2{
 	font-size: 1.75vw;
 	font-weight:100;
 	font-family: mr-eaves-modern, sans-serif;
-	font-style:italic;
+	font-style:normal;
 }
 
 #me{
@@ -287,12 +288,30 @@ li{
 	font-style:normal;
 }
 
-.headline{
+.headline-left{
 	margin-top:3%;
 	width:35%;
 	display:block;
 	margin-left:9%;
 	margin-right:auto;
+	position:absolute;
+	color: #fff;
+}
+
+#headline-left{
+	margin-left:9%;
+	margin-right:auto;
+}
+
+#headline-right{
+	margin-right:auto;
+	margin-left:65%;
+}
+
+.headline{
+	margin-top:3%;
+	width:30%;
+	display:block;
 	position:absolute;
 	color: #fff;
 }
