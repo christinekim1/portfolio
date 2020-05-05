@@ -11,24 +11,54 @@
 <body>
 	<div class = "wrapper">
 		<header>
+			<a href = "index.html"><img id = "logo" src = "images/logo4.PNG" alt = "Christine Kim Logo"></a>
 			<nav>
-				<a href = "about.html">ABOUT</a>
-			</nav>
-			<a href = "index.html"><img id = "logo" src = "images/logo3.PNG" alt = "Christine Kim Logo"></a>
+				<a href = "about.html">&nbsp;&nbsp;&nbsp;&nbsp;ABOUT</a>
+			</nav>			
 			<nav>
 				<a href = "assets/Christine Kim Resume.pdf">RESUME</a>
 			</nav>
 		</header>
 		<div class = "content">
+			<svg id = 'test' width="450" height="2790" viewBox="0 0 450 2790" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path id = 'line' d="M73.7696 47.4798C78.7742 82.3118 73.7696 99.0121 141.332 132.89C203.254 163.939 276.458 105.215 296.477 47.4798C298.312 22.5089 298.942 4.92181 269.952 3.10476C240.032 1.22941 230.916 24.8621 230.916 47.4798C230.916 116.358 387.413 180.952 389.063 293.69C391.169 437.613 157.848 426.338 141.332 576.64C124.817 726.943 267.071 866.317 367.042 794.221C401.414 769.433 446.116 731.714 427.098 705.948C408.081 680.182 367.042 703.562 367.042 732.191C367.042 760.82 447.876 851.601 427.098 929.255C395.096 1048.86 220.116 1160.32 146.838 1058.56C123.816 1026.59 183.872 987.467 160.851 956.93C97.5794 873.001 -22.5503 1187.46 48.7463 1305.25C107.676 1402.61 341.525 1313.45 323.502 1424.54C308.04 1519.84 173.195 1520.6 89.7844 1530.94C65.7621 1529.99 26.9358 1516.77 33.2319 1491.34C38.745 1469.07 65.8229 1467.23 89.7844 1468.44C136.249 1470.78 171.861 1519.97 146.838 1568.16C121.814 1616.35 25.5944 1629.96 48.7463 1683.63C61.7741 1713.83 87.4747 1720.01 117.811 1735.16C195.885 1774.17 325.504 1735.16 343.521 1735.16C389.601 1733.54 473.153 1749.28 438.721 1825.24C395.681 1920.19 101.724 1751.96 33.2319 1897.5C14.9144 1936.42 10.7109 1966.83 9.20948 2005C7.70808 2043.17 158.762 2189.76 197.297 2141.57C235.833 2093.37 213.312 2049.95 187.789 2051.38C162.265 2052.82 130.735 2132.02 235.833 2167.81C340.931 2203.6 461.543 2268.01 415 2310C368.457 2351.99 333.122 2440.42 259.554 2441.37C185.985 2442.33 206.004 2546.82 147.95 2547.78C89.8959 2548.73 36.7352 2747.7 9.20948 2691.88C-18.3162 2636.05 48.7462 2631.75 117.81 2647.5C186.875 2663.25 242.933 2806.23 314.5 2785.24" stroke="#FFD875" stroke-width="5" stroke-dasharray="10 10"/>
+			</svg>
+
+			<script>
+				// Get the id of the <path> element and the length of <path>
+				var triangle = document.getElementById("line");
+				var length = triangle.getTotalLength();
+				
+				// The start position of the drawing
+				triangle.style.strokeDasharray = length;
+				
+				// Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+				triangle.style.strokeDashoffset = length;
+				
+				// Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+				window.addEventListener("scroll", myFunction);
+				
+				function myFunction() {
+				  var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+				
+				  var draw = length * scrollpercent;
+				
+				  // Reverse the drawing (when scrolling upwards)
+				  triangle.style.strokeDashoffset = length - draw;
+				}
+				</script>
+
+
+			<div class= 'vert-line'></div>
 			<div class = "tagline">
-				<h1>A UI/UX designer with a passion for creating usable, compelling interfaces.</h1>
-			</div>
-			<div class = "scrollDown">
-				<h2>Recent Projects</h2>
-			</div>
+				<h1 class = 'animatetagline' id = 'line1'>A UI/UX Designer with</h1>
+				<h1 class = 'animatetagline' id = 'line1'>a passion for creating</h1>
+				<h1 class = 'animatetagline' id = 'line1'>usable, compelling interfaces.</h1>
+				<h3 id = 'start'>start here</h3>
+			</div><br><br>
 			<div class = "project" id = "swApp">
 				<div class = "project-label">
-					<h2>SWAPP</h2>
+					<h2>Swapp</h2>
 					<p>A native mobile app designed to help managers oversee their businesses by giving them the means to facilitate shift swaps between employees and communicate weekly schedules.</p>
 					<a href = "swapp.html">see more</a>
 				</div>
@@ -36,20 +66,13 @@
 			</div>
 			<div class = "project" id = "atlantis">
 				<div class = "project-label">
-					<h2>ATLANTIS HUB</h2>
+					<h2>Atlantis Hub</h2>
 					<p>A native mobile app designed to help managers oversee their businesses by giving them the means to facilitate shift swaps between employees and communicate weekly schedules.</p>
 					<a href = "atlantis.html">see more</a>
 				</div>
 				<img src = "images/atlantisHub/atCover.png" alt = "Atlantis Hub Cover Photo">
 			</div>
-			<div class = "project" id = "bigSkinny">
-				<div class = "project-label">
-					<h2>BIG SKINNY</h2>
-					<p>A native mobile app designed to help managers oversee their businesses by giving them the means to facilitate shift swaps between employees and communicate weekly schedules.</p>
-					<a href = "bigSkinny.html">see more</a>
-				</div>
-				<img src = "images/bigSkinny/cover.png" alt = "Big Skinny Cover Photo">
-			</div>
+
 		</div>
 	</div>
 </body>

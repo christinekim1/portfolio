@@ -1,34 +1,84 @@
 @charset "UTF-8";
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	#row #col{
+	  width: 100%;
+	  clear: both;
+	  margin-left:0%;
+	}
+
+	#row-mid #col{
+		width:100%;
+		text-align:center;
+	}
+	p{
+		font-size: 1.75em;
+	}
+	h2{
+		font-size:2em;
+	}
+	h1{
+		font-size:5em;
+	}
+
+	#line1{
+		font-size:2em;
+		padding-bottom:3%;
+	}
+
+	#start{
+		display:none;
+	}
+
+	#test{
+		display:none;
+	}
+
+	h3{
+		font-size:2em;
+	}
+
+	div#side{
+		display:none;
+	}
+	#row-mid{
+		width:100%;
+		clear:both;
+	}
+  }
 
 body{
 	font-family: mr-eaves-modern, sans-serif;
-	font-weight: 100;
+	font-weight: 200;
 	font-style: normal;
 	margin:0;
 	padding:0;
+	font-size:1.75vw;
 }
 
 .wrapper{
-	height: 3500px;
+	height: 100%;
 }
 
 #logo{
 	display:inline-block;
-	width: 10%;
-	height: 10%;
+	width: 5%;
 	vertical-align: middle; 
 }
 
 header{
+	margin-left:10%;
 	margin-top: 50px;
-	text-align: center;
+	/* text-align: center; */
 	position: relative;
 }
 
 nav{
+	font-family: Acumin Pro;
+	font-weight:400;
 	display: inline-block;
-	padding-right: 10%;
-	padding-left: 10%;
+	padding-right: 5%;
+	padding-left: 5%;
 	vertical-align: middle; 
 }
 
@@ -45,10 +95,11 @@ a:hover{
 
 .tagline{
 	margin-top: 12%;
-	margin-left: auto;
+	margin-left: 32%;
 	margin-right: auto;
 	display: block;
-	width:40%;
+	width:50%;
+	margin-bottom:15%;
 }
 
 .scrollDown{
@@ -86,9 +137,9 @@ a:hover{
 }
 
 .project-label h2{
+	font-family: le-monde-livre-std, serif;
+	font-weight: 400;;
 	text-align:left;
-	font-weight: 400;
-	font-size: 2.5vw;
 	font-style: normal;
 }
 
@@ -96,7 +147,6 @@ a:hover{
 	text-align:left;
 	word-wrap: break-word;
 	font-weight: 200;
-	font-size:1.75vw;
 }
 
 .project-label a{
@@ -130,15 +180,13 @@ h1{
 }
 
 h2{
-	font-size: 1.75vw;
 	font-weight:100;
 	font-family: mr-eaves-modern, sans-serif;
 	font-style:normal;
 }
 
 #me{
-	width:15%;
-	height:15%;
+	width:45%;
 }
 
 .intro{
@@ -147,25 +195,30 @@ h2{
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	width:80%;
+	width:35%;
+}
+
+.intro a{
+	font-size: 1.5vw;
 }
 
 .intro h2{
 	margin-top:5%;
 	font-style:normal;
-	font-weight: 200;
+	font-weight: 400;
 	font-size:1.85vw;
 }
 
 .intro #paragraph{
 	text-align: left;
-	width:40%;
+	/* width:40%; */
 	margin-right: auto;
+	font-size:1.5vw;
 	margin-left: auto;
 }
 
 .intro #paragraph p{
-	font-size: 1.25vw;
+	font-weight:200;
 }
 
 .subcontent{
@@ -177,14 +230,11 @@ h2{
 }
 
 .subcontent h1{
-	font-size: 4vw;
 	font-weight: 400;
-	opacity:0.2;
+	opacity:0.6;
+	color: #FF785A;
 }
 
-.subcontent p{
-	font-size:1.5vw;
-}
 
 
 #row{
@@ -193,6 +243,12 @@ h2{
 	margin-top:0;
 	/*border:solid;*/
 }
+
+#row img{
+	width:100%;
+}
+
+
 
 #col{
 	/*border:solid;*/
@@ -236,9 +292,10 @@ li{
 }
 
 #info h2{
-	font-size:1.5vw;
-	font-weight:200;
+	font-size:1.75vw;
+	font-weight:400;
 	font-style:normal;
+	font-family: le-monde-livre-std, serif;
 }
 
 #schoolInfo{
@@ -247,7 +304,6 @@ li{
 
 
 #col #schoolInfo h2{
-	font-size:1.75vw;
 	font-style: normal;
 	font-weight: 400;
 	margin-bottom:0;
@@ -255,19 +311,21 @@ li{
 }
 
 #col #schoolInfo h3{
-	font-size:1.25vw;
 	font-style: normal;
-	font-weight: 100;
+	font-weight: 200;
 	margin-top:2%;
 	margin-bottom:0;
 }
 
 #col #schoolInfo p{
-	font-size:1.25vw;
 	font-style: normal;
-	font-weight: 100;
+	font-weight: 200;
 	margin-top:1.5%;
 	margin-bottom:0;
+}
+
+#col #icon{
+	width:40%;
 }
 
 #head{
@@ -280,7 +338,6 @@ li{
 }
 
 #head h2{
-	font-size: 1.5vw;
 	font-weight:200;
 	display:inline-block;
 	vertical-align:top;
@@ -318,11 +375,9 @@ li{
 
 .headline h1{
 	font-weight:600;
-	font-size:3vw;
 }
 
 .headline p{
-	font-size:1.5vw;
 	text-align:left;
 	font-weight:200;
 }
@@ -348,10 +403,6 @@ li{
 	vertical-align: top;
 }
 
-#row-mid p{
-	font-size: 1.25vw;
-}
-
 #side{
 	margin-top:10%;
 	margin-right:10%;
@@ -371,29 +422,63 @@ li{
 	text-align: center;
 	width:100%;
 	margin-top:0;
-	background:grey;
+	background:#FFD875;
 	font-style:normal;
-	color: #fff;
+	color: #000;
 	padding-top:2%;
 	padding-bottom:2%;
 }
 
 #header-row h2{
 	font-style:normal;
-	font-size: 2vw;
 	font-weight:200;
 }
 
-#header-row p{
-	font-size:1.5vw;
-}
+
 
 blockquote{
 	font-size:3vw;
 	font-weight:200;
 }
 
-#row p{
-	font-size:1.5vw;
+#line1{
+	font-family: le-monde-livre-std, serif;
+	font-weight: 700;
+	margin-top:0;
+	margin-bottom:0;
+	line-height:3.5vw;
+	color:rgb(250, 205, 91);
 }
 
+/* @keyframes growline{
+	from {height:0;}
+	to {height:25%;}
+} */
+
+/* .vert-line{
+	border-left: 10px solid black;
+	height: 25%;
+	position:absolute;
+	margin-left:15%;
+	animation-name: growline;
+	animation-duration: 3s;
+	margin-top: 1%
+
+} */
+
+#test{
+	position:absolute;
+	margin-top:18%;
+	margin-left:30%;
+	z-index:-1;
+}
+
+#start{
+	font-family: le-monde-livre-std, serif;
+	font-weight: 400;
+	color:rgb(250, 205, 91);
+}
+
+.slide{
+	width:50%;
+}
